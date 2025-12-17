@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico - Desigualdade Educacional no Brasil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0/dist/chartjs-plugin-annotation.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 450px;
+            max-height: 50vh;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-black text-[#003459] mb-2">A Educação no Brasil</h1>
+            <p class="text-xl md:text-2xl text-[#007EA7]">Um Retrato de Avanços e Desigualdades Profundas</p>
+        </header>
+
+        <section id="overview" class="mb-16">
+            <div class="text-center max-w-4xl mx-auto mb-8">
+                <p class="text-lg">Na última década, o Brasil avançou em seus indicadores educacionais. De 2012 a 2022, a taxa média geral de conclusão de ensino no país, considerando todos os níveis, atingiu um marco importante. No entanto, a média nacional esconde uma profunda desigualdade: o local de nascimento de um brasileiro ainda é um fator determinante para suas oportunidades.</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-center mb-1 text-[#003459]">Desempenho Regional vs. Média Nacional</h2>
+                <p class="text-center text-gray-600 mb-6">Taxa média de conclusão de ensino (2012-2022)</p>
+                <div class="chart-container">
+                    <canvas id="regionalBarChart"></canvas>
+                </div>
+                 <p class="text-center text-sm text-gray-500 mt-4">A análise revela dois blocos distintos: Sudeste, Sul e Centro-Oeste consistentemente acima da média nacional, enquanto Norte e Nordeste apresentam os maiores desafios.</p>
+            </div>
+        </section>
+
+        <section id="deep-dive" class="mb-16">
+            <div class="text-center max-w-4xl mx-auto mb-8">
+                <h2 class="text-3xl md:text-4xl font-black text-[#003459] mb-2">O Abismo Entre os Extremos</h2>
+                <p class="text-lg">Para entender a profundidade dessa lacuna, focamos nos dois extremos: a jornada educacional no Sudeste em comparação com a do Nordeste, usando a média do Brasil como régua. A diferença se acentua drasticamente conforme o nível de ensino avança.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 text-[#003459]">Ensino Fundamental</h3>
+                    <div class="chart-container h-80 max-h-[40vh]">
+                        <canvas id="fundamentalLineChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Nesta etapa, há maior convergência. As regiões acompanham de perto a média nacional, indicando um acesso mais universalizado, embora a desigualdade já se manifeste sutilmente.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 text-[#003459]">Ensino Médio</h3>
+                    <div class="chart-container h-80 max-h-[40vh]">
+                        <canvas id="medioLineChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">A lacuna começa a se alargar. O Sudeste se descola e supera consistentemente a média do Brasil, enquanto o Nordeste fica para trás, expondo as diferentes realidades na transição para a vida adulta.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 text-[#003459]">Ensino Superior</h3>
+                    <div class="chart-container h-80 max-h-[40vh]">
+                        <canvas id="superiorLineChart"></canvas>
+                    </div>
+                     <p class="text-sm text-gray-600 mt-4">Aqui, o abismo se torna intransponível. O Sudeste dispara em relação à média nacional, enquanto o Nordeste enfrenta uma imensa barreira para a conclusão de uma graduação.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="highlights" class="text-center mb-12">
+             <div class="max-w-4xl mx-auto mb-8">
+                <h2 class="text-3xl md:text-4xl font-black text-[#003459] mb-2">A Lacuna em Números (2022)</h2>
+                <p class="text-lg">Em 2022, a diferença na conclusão do ensino superior era gritante. O progresso, embora existente, não foi suficiente para reduzir a desigualdade regional que marca o sistema educacional.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-[#00A8E8] text-white p-6 rounded-lg shadow-lg">
+                    <p class="text-lg font-bold">Sudeste</p>
+                    <p class="text-5xl font-black">26,2%</p>
+                    <p class="text-sm">concluíram o Ensino Superior</p>
+                </div>
+                 <div class="bg-[#007EA7] text-white p-6 rounded-lg shadow-lg">
+                    <p class="text-lg font-bold">Média Brasil</p>
+                    <p class="text-5xl font-black">22,1%</p>
+                    <p class="text-sm">concluíram o Ensino Superior</p>
+                </div>
+                <div class="bg-[#003459] text-white p-6 rounded-lg shadow-lg">
+                    <p class="text-lg font-bold">Nordeste</p>
+                    <p class="text-5xl font-black">15,3%</p>
+                    <p class="text-sm">concluíram o Ensino Superior</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-16 text-sm text-gray-500">
+            <p>Análise baseada nos dados da Pesquisa Nacional por Amostra de Domicílios Contínua (PNAD Contínua) - Educação 2012-2022.</p>
+            <p>Este é um infográfico interativo gerado por IA. Os dados foram processados para visualização.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const DATA = [
+            {"regiao":"Brasil","grupo":"Todas","ano":2022,"nivel":"fundamental","taxa_concluiu_pct":89.8},
+            {"regiao":"Norte","grupo":"Todas","ano":2022,"nivel":"fundamental","taxa_concluiu_pct":85},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2022,"nivel":"fundamental","taxa_concluiu_pct":85.3},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2022,"nivel":"fundamental","taxa_concluiu_pct":93.5},
+            {"regiao":"Sul","grupo":"Todas","ano":2022,"nivel":"fundamental","taxa_concluiu_pct":91.8},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2022,"nivel":"fundamental","taxa_concluiu_pct":91.8},
+            {"regiao":"Brasil","grupo":"Todas","ano":2019,"nivel":"fundamental","taxa_concluiu_pct":87},
+            {"regiao":"Norte","grupo":"Todas","ano":2019,"nivel":"fundamental","taxa_concluiu_pct":80.6},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2019,"nivel":"fundamental","taxa_concluiu_pct":80.4},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2019,"nivel":"fundamental","taxa_concluiu_pct":92.6},
+            {"regiao":"Sul","grupo":"Todas","ano":2019,"nivel":"fundamental","taxa_concluiu_pct":89.2},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2019,"nivel":"fundamental","taxa_concluiu_pct":89.9},
+            {"regiao":"Brasil","grupo":"Todas","ano":2018,"nivel":"fundamental","taxa_concluiu_pct":85.7},
+            {"regiao":"Norte","grupo":"Todas","ano":2018,"nivel":"fundamental","taxa_concluiu_pct":79.9},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2018,"nivel":"fundamental","taxa_concluiu_pct":78},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2018,"nivel":"fundamental","taxa_concluiu_pct":91.3},
+            {"regiao":"Sul","grupo":"Todas","ano":2018,"nivel":"fundamental","taxa_concluiu_pct":89.1},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2018,"nivel":"fundamental","taxa_concluiu_pct":88.4},
+            {"regiao":"Brasil","grupo":"Todas","ano":2017,"nivel":"fundamental","taxa_concluiu_pct":84},
+            {"regiao":"Norte","grupo":"Todas","ano":2017,"nivel":"fundamental","taxa_concluiu_pct":77},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2017,"nivel":"fundamental","taxa_concluiu_pct":75.7},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2017,"nivel":"fundamental","taxa_concluiu_pct":90.6},
+            {"regiao":"Sul","grupo":"Todas","ano":2017,"nivel":"fundamental","taxa_concluiu_pct":86.9},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2017,"nivel":"fundamental","taxa_concluiu_pct":86.1},
+            {"regiao":"Brasil","grupo":"Todas","ano":2016,"nivel":"fundamental","taxa_concluiu_pct":83.5},
+            {"regiao":"Norte","grupo":"Todas","ano":2016,"nivel":"fundamental","taxa_concluiu_pct":78},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2016,"nivel":"fundamental","taxa_concluiu_pct":75.6},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2016,"nivel":"fundamental","taxa_concluiu_pct":89.1},
+            {"regiao":"Sul","grupo":"Todas","ano":2016,"nivel":"fundamental","taxa_concluiu_pct":86.2},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2016,"nivel":"fundamental","taxa_concluiu_pct":86.8},
+            {"regiao":"Brasil","grupo":"Todas","ano":2015,"nivel":"fundamental","taxa_concluiu_pct":82.3},
+            {"regiao":"Norte","grupo":"Todas","ano":2015,"nivel":"fundamental","taxa_concluiu_pct":74.6},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2015,"nivel":"fundamental","taxa_concluiu_pct":74.2},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2015,"nivel":"fundamental","taxa_concluiu_pct":88.3},
+            {"regiao":"Sul","grupo":"Todas","ano":2015,"nivel":"fundamental","taxa_concluiu_pct":86.8},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2015,"nivel":"fundamental","taxa_concluiu_pct":85.1},
+            {"regiao":"Brasil","grupo":"Todas","ano":2014,"nivel":"fundamental","taxa_concluiu_pct":81.3},
+            {"regiao":"Norte","grupo":"Todas","ano":2014,"nivel":"fundamental","taxa_concluiu_pct":72.2},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2014,"nivel":"fundamental","taxa_concluiu_pct":72.9},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2014,"nivel":"fundamental","taxa_concluiu_pct":88},
+            {"regiao":"Sul","grupo":"Todas","ano":2014,"nivel":"fundamental","taxa_concluiu_pct":86.4},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2014,"nivel":"fundamental","taxa_concluiu_pct":83.4},
+            {"regiao":"Brasil","grupo":"Todas","ano":2013,"nivel":"fundamental","taxa_concluiu_pct":79.7},
+            {"regiao":"Norte","grupo":"Todas","ano":2013,"nivel":"fundamental","taxa_concluiu_pct":71.2},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2013,"nivel":"fundamental","taxa_concluiu_pct":70.1},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2013,"nivel":"fundamental","taxa_concluiu_pct":86.4},
+            {"regiao":"Sul","grupo":"Todas","ano":2013,"nivel":"fundamental","taxa_concluiu_pct":85.3},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2013,"nivel":"fundamental","taxa_concluiu_pct":84.1},
+            {"regiao":"Brasil","grupo":"Todas","ano":2012,"nivel":"fundamental","taxa_concluiu_pct":78.6},
+            {"regiao":"Norte","grupo":"Todas","ano":2012,"nivel":"fundamental","taxa_concluiu_pct":70.7},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2012,"nivel":"fundamental","taxa_concluiu_pct":69.2},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2012,"nivel":"fundamental","taxa_concluiu_pct":85.6},
+            {"regiao":"Sul","grupo":"Todas","ano":2012,"nivel":"fundamental","taxa_concluiu_pct":82.6},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2012,"nivel":"fundamental","taxa_concluiu_pct":82.2},
+            {"regiao":"Brasil","grupo":"Todas","ano":2012,"nivel":"medio","taxa_concluiu_pct":57.9},
+            {"regiao":"Norte","grupo":"Todas","ano":2012,"nivel":"medio","taxa_concluiu_pct":47.4},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2012,"nivel":"medio","taxa_concluiu_pct":47.8},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2012,"nivel":"medio","taxa_concluiu_pct":65.3},
+            {"regiao":"Sul","grupo":"Todas","ano":2012,"nivel":"medio","taxa_concluiu_pct":62.1},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2012,"nivel":"medio","taxa_concluiu_pct":60.1},
+            {"regiao":"Brasil","grupo":"Todas","ano":2013,"nivel":"medio","taxa_concluiu_pct":60.2},
+            {"regiao":"Norte","grupo":"Todas","ano":2013,"nivel":"medio","taxa_concluiu_pct":50.7},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2013,"nivel":"medio","taxa_concluiu_pct":50.3},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2013,"nivel":"medio","taxa_concluiu_pct":68.2},
+            {"regiao":"Sul","grupo":"Todas","ano":2013,"nivel":"medio","taxa_concluiu_pct":62.2},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2013,"nivel":"medio","taxa_concluiu_pct":61.9},
+            {"regiao":"Brasil","grupo":"Todas","ano":2014,"nivel":"medio","taxa_concluiu_pct":61},
+            {"regiao":"Norte","grupo":"Todas","ano":2014,"nivel":"medio","taxa_concluiu_pct":51.2},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2014,"nivel":"medio","taxa_concluiu_pct":52.4},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2014,"nivel":"medio","taxa_concluiu_pct":69.1},
+            {"regiao":"Sul","grupo":"Todas","ano":2014,"nivel":"medio","taxa_concluiu_pct":62.3},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2014,"nivel":"medio","taxa_concluiu_pct":60},
+            {"regiao":"Brasil","grupo":"Todas","ano":2015,"nivel":"medio","taxa_concluiu_pct":61.4},
+            {"regiao":"Norte","grupo":"Todas","ano":2015,"nivel":"medio","taxa_concluiu_pct":52.7},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2015,"nivel":"medio","taxa_concluiu_pct":54},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2015,"nivel":"medio","taxa_concluiu_pct":68.1},
+            {"regiao":"Sul","grupo":"Todas","ano":2015,"nivel":"medio","taxa_concluiu_pct":62},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2015,"nivel":"medio","taxa_concluiu_pct":62.5},
+            {"regiao":"Brasil","grupo":"Todas","ano":2016,"nivel":"medio","taxa_concluiu_pct":64},
+            {"regiao":"Norte","grupo":"Todas","ano":2016,"nivel":"medio","taxa_concluiu_pct":54.1},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2016,"nivel":"medio","taxa_concluiu_pct":56.6},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2016,"nivel":"medio","taxa_concluiu_pct":71.9},
+            {"regiao":"Sul","grupo":"Todas","ano":2016,"nivel":"medio","taxa_concluiu_pct":64.1},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2016,"nivel":"medio","taxa_concluiu_pct":63.2},
+            {"regiao":"Brasil","grupo":"Todas","ano":2017,"nivel":"medio","taxa_concluiu_pct":64.5},
+            {"regiao":"Norte","grupo":"Todas","ano":2017,"nivel":"medio","taxa_concluiu_pct":57},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2017,"nivel":"medio","taxa_concluiu_pct":56.8},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2017,"nivel":"medio","taxa_concluiu_pct":71.5},
+            {"regiao":"Sul","grupo":"Todas","ano":2017,"nivel":"medio","taxa_concluiu_pct":64.6},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2017,"nivel":"medio","taxa_concluiu_pct":66},
+            {"regiao":"Brasil","grupo":"Todas","ano":2018,"nivel":"medio","taxa_concluiu_pct":66.4},
+            {"regiao":"Norte","grupo":"Todas","ano":2018,"nivel":"medio","taxa_concluiu_pct":59.3},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2018,"nivel":"medio","taxa_concluiu_pct":59.4},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2018,"nivel":"medio","taxa_concluiu_pct":72.3},
+            {"regiao":"Sul","grupo":"Todas","ano":2018,"nivel":"medio","taxa_concluiu_pct":67.7},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2018,"nivel":"medio","taxa_concluiu_pct":69},
+            {"regiao":"Brasil","grupo":"Todas","ano":2019,"nivel":"medio","taxa_concluiu_pct":69},
+            {"regiao":"Norte","grupo":"Todas","ano":2019,"nivel":"medio","taxa_concluiu_pct":60.6},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2019,"nivel":"medio","taxa_concluiu_pct":61},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2019,"nivel":"medio","taxa_concluiu_pct":76.5},
+            {"regiao":"Sul","grupo":"Todas","ano":2019,"nivel":"medio","taxa_concluiu_pct":69.1},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2019,"nivel":"medio","taxa_concluiu_pct":69.5},
+            {"regiao":"Brasil","grupo":"Todas","ano":2022,"nivel":"medio","taxa_concluiu_pct":73},
+            {"regiao":"Norte","grupo":"Todas","ano":2022,"nivel":"medio","taxa_concluiu_pct":67.4},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2022,"nivel":"medio","taxa_concluiu_pct":66.1},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2022,"nivel":"medio","taxa_concluiu_pct":79.3},
+            {"regiao":"Sul","grupo":"Todas","ano":2022,"nivel":"medio","taxa_concluiu_pct":71.9},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2022,"nivel":"medio","taxa_concluiu_pct":74.7},
+            {"regiao":"Brasil","grupo":"Todas","ano":2012,"nivel":"superior","taxa_concluiu_pct":15.2},
+            {"regiao":"Norte","grupo":"Todas","ano":2012,"nivel":"superior","taxa_concluiu_pct":8.8},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2012,"nivel":"superior","taxa_concluiu_pct":9},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2012,"nivel":"superior","taxa_concluiu_pct":19.4},
+            {"regiao":"Sul","grupo":"Todas","ano":2012,"nivel":"superior","taxa_concluiu_pct":17},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2012,"nivel":"superior","taxa_concluiu_pct":17.4},
+            {"regiao":"Brasil","grupo":"Todas","ano":2013,"nivel":"superior","taxa_concluiu_pct":15.8},
+            {"regiao":"Norte","grupo":"Todas","ano":2013,"nivel":"superior","taxa_concluiu_pct":9.7},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2013,"nivel":"superior","taxa_concluiu_pct":9.6},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2013,"nivel":"superior","taxa_concluiu_pct":19.8},
+            {"regiao":"Sul","grupo":"Todas","ano":2013,"nivel":"superior","taxa_concluiu_pct":18.5},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2013,"nivel":"superior","taxa_concluiu_pct":18.7},
+            {"regiao":"Brasil","grupo":"Todas","ano":2014,"nivel":"superior","taxa_concluiu_pct":16.4},
+            {"regiao":"Norte","grupo":"Todas","ano":2014,"nivel":"superior","taxa_concluiu_pct":9.9},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2014,"nivel":"superior","taxa_concluiu_pct":8.6},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2014,"nivel":"superior","taxa_concluiu_pct":21.4},
+            {"regiao":"Sul","grupo":"Todas","ano":2014,"nivel":"superior","taxa_concluiu_pct":19.1},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2014,"nivel":"superior","taxa_concluiu_pct":19.4},
+            {"regiao":"Brasil","grupo":"Todas","ano":2015,"nivel":"superior","taxa_concluiu_pct":17.5},
+            {"regiao":"Norte","grupo":"Todas","ano":2015,"nivel":"superior","taxa_concluiu_pct":9.9},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2015,"nivel":"superior","taxa_concluiu_pct":11.8},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2015,"nivel":"superior","taxa_concluiu_pct":21.8},
+            {"regiao":"Sul","grupo":"Todas","ano":2015,"nivel":"superior","taxa_concluiu_pct":19.9},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2015,"nivel":"superior","taxa_concluiu_pct":20},
+            {"regiao":"Brasil","grupo":"Todas","ano":2016,"nivel":"superior","taxa_concluiu_pct":19.1},
+            {"regiao":"Norte","grupo":"Todas","ano":2016,"nivel":"superior","taxa_concluiu_pct":12},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2016,"nivel":"superior","taxa_concluiu_pct":12},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2016,"nivel":"superior","taxa_concluiu_pct":23.3},
+            {"regiao":"Sul","grupo":"Todas","ano":2016,"nivel":"superior","taxa_concluiu_pct":22.3},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2016,"nivel":"superior","taxa_concluiu_pct":22.5},
+            {"regiao":"Brasil","grupo":"Todas","ano":2017,"nivel":"superior","taxa_concluiu_pct":19},
+            {"regiao":"Norte","grupo":"Todas","ano":2017,"nivel":"superior","taxa_concluiu_pct":14},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2017,"nivel":"superior","taxa_concluiu_pct":12.5},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2017,"nivel":"superior","taxa_concluiu_pct":22.4},
+            {"regiao":"Sul","grupo":"Todas","ano":2017,"nivel":"superior","taxa_concluiu_pct":22.2},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2017,"nivel":"superior","taxa_concluiu_pct":23},
+            {"regiao":"Brasil","grupo":"Todas","ano":2018,"nivel":"superior","taxa_concluiu_pct":20.1},
+            {"regiao":"Norte","grupo":"Todas","ano":2018,"nivel":"superior","taxa_concluiu_pct":13.2},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2018,"nivel":"superior","taxa_concluiu_pct":13.7},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2018,"nivel":"superior","taxa_concluiu_pct":23.9},
+            {"regiao":"Sul","grupo":"Todas","ano":2018,"nivel":"superior","taxa_concluiu_pct":23.2},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2018,"nivel":"superior","taxa_concluiu_pct":24.1},
+            {"regiao":"Brasil","grupo":"Todas","ano":2019,"nivel":"superior","taxa_concluiu_pct":21.7},
+            {"regiao":"Norte","grupo":"Todas","ano":2019,"nivel":"superior","taxa_concluiu_pct":14.7},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2019,"nivel":"superior","taxa_concluiu_pct":15},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2019,"nivel":"superior","taxa_concluiu_pct":25.6},
+            {"regiao":"Sul","grupo":"Todas","ano":2019,"nivel":"superior","taxa_concluiu_pct":23.6},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2019,"nivel":"superior","taxa_concluiu_pct":27.1},
+            {"regiao":"Brasil","grupo":"Todas","ano":2022,"nivel":"superior","taxa_concluiu_pct":22.1},
+            {"regiao":"Norte","grupo":"Todas","ano":2022,"nivel":"superior","taxa_concluiu_pct":16.2},
+            {"regiao":"Nordeste","grupo":"Todas","ano":2022,"nivel":"superior","taxa_concluiu_pct":15.3},
+            {"regiao":"Sudeste","grupo":"Todas","ano":2022,"nivel":"superior","taxa_concluiu_pct":26.2},
+            {"regiao":"Sul","grupo":"Todas","ano":2022,"nivel":"superior","taxa_concluiu_pct":24},
+            {"regiao":"Centro-Oeste","grupo":"Todas","ano":2022,"nivel":"superior","taxa_concluiu_pct":27.1}
+        ];
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const allData = DATA.filter(d => d.grupo === 'Todas' && d.regiao.trim() !== '');
+
+            const tooltipTitleCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            
+            function calculateAverage(data, region) {
+                const regionData = data.filter(d => d.regiao === region);
+                const sum = regionData.reduce((acc, curr) => acc + curr.taxa_concluiu_pct, 0);
+                return regionData.length > 0 ? sum / regionData.length : 0;
+            }
+
+            const regions = ['Sudeste', 'Sul', 'Centro-Oeste', 'Norte', 'Nordeste'];
+            const regionAverages = regions.map(r => ({ region: r, avg: calculateAverage(allData, r) }));
+            regionAverages.sort((a, b) => b.avg - a.avg);
+
+            const brazilAverage = calculateAverage(allData, 'Brasil');
+
+            const barCtx = document.getElementById('regionalBarChart').getContext('2d');
+            new Chart(barCtx, {
+                type: 'bar',
+                data: {
+                    labels: regionAverages.map(r => r.region),
+                    datasets: [{
+                        label: 'Taxa Média de Conclusão (%)',
+                        data: regionAverages.map(r => r.avg.toFixed(2)),
+                        backgroundColor: ['#00A8E8', '#0090C1', '#007EA7', '#00547A', '#003459'],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    ...tooltipTitleCallback,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Taxa Média de Conclusão (%)' }
+                        }
+                    },
+                    plugins: {
+                        ...tooltipTitleCallback.plugins,
+                        annotation: {
+                            annotations: {
+                                line1: {
+                                    type: 'line',
+                                    yMin: brazilAverage,
+                                    yMax: brazilAverage,
+                                    borderColor: '#4b5563',
+                                    borderWidth: 2,
+                                    borderDash: [6, 6],
+                                    label: {
+                                        backgroundColor: 'rgba(243, 244, 246, 0.8)',
+                                        color: '#1f2937',
+                                        content: `Média Brasil: ${brazilAverage.toFixed(2)}%`,
+                                        enabled: true,
+                                        position: 'end',
+                                        font: {
+                                            weight: 'bold'
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        legend: { display: false }
+                    }
+                }
+            });
+            
+            function createLineChart(canvasId, level) {
+                const filteredData = allData.filter(d => d.nivel === level && ['Sudeste', 'Nordeste', 'Brasil'].includes(d.regiao));
+                const years = [...new Set(filteredData.map(d => d.ano))].sort();
+
+                const getRegionData = (region) => {
+                    return years.map(year => {
+                        const entry = filteredData.find(d => d.ano === year && d.regiao === region);
+                        return entry ? entry.taxa_concluiu_pct : null;
+                    });
+                };
+
+                const lineCtx = document.getElementById(canvasId).getContext('2d');
+                new Chart(lineCtx, {
+                    type: 'line',
+                    data: {
+                        labels: years,
+                        datasets: [
+                            {
+                                label: 'Sudeste',
+                                data: getRegionData('Sudeste'),
+                                borderColor: '#00A8E8',
+                                backgroundColor: '#00A8E8',
+                                tension: 0.1,
+                                borderWidth: 3
+                            },
+                            {
+                                label: 'Nordeste',
+                                data: getRegionData('Nordeste'),
+                                borderColor: '#003459',
+                                backgroundColor: '#003459',
+                                tension: 0.1,
+                                borderWidth: 3
+                            },
+                            {
+                                label: 'Média Brasil',
+                                data: getRegionData('Brasil'),
+                                borderColor: 'rgba(150, 150, 150, 0.8)',
+                                backgroundColor: 'rgba(150, 150, 150, 0.8)',
+                                borderDash: [5, 5],
+                                tension: 0.1,
+                                borderWidth: 2
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        ...tooltipTitleCallback,
+                         scales: {
+                            y: {
+                                beginAtZero: false,
+                                title: { display: true, text: 'Taxa de Conclusão (%)' }
+                            },
+                            x: {
+                                title: { display: true, text: 'Ano' }
+                            }
+                        },
+                        plugins: {
+                           ...tooltipTitleCallback.plugins,
+                            legend: {
+                                position: 'bottom',
+                            },
+                        }
+                    }
+                });
+            }
+
+            createLineChart('fundamentalLineChart', 'fundamental');
+            createLineChart('medioLineChart', 'medio');
+            createLineChart('superiorLineChart', 'superior');
+        });
+    </script>
+</body>
+</html>
+
