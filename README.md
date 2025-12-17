@@ -1,2 +1,64 @@
 # Congresso_educacao_2025
 Congresso Educação Inovação e técninologia
+Desigualdades Regionais e Étnico-Raciais na Conclusão do Ensino no Brasil (2012–2022)
+Este repositório reúne análises sobre as taxas de conclusão do ensino fundamental, médio e superior no Brasil entre 2012 e 2022, com foco nas desigualdades regionais e étnico-raciais.
+
+📌 Objetivo do Projeto
+Investigar como as taxas de conclusão escolar variam entre:
+
+As regiões brasileiras, com ênfase no Sudeste e Nordeste;
+Os diferentes grupos de raça/cor, conforme classificação da PNAD Contínua.
+O estudo busca evidenciar disparidades persistentes nos níveis fundamental, médio e superior.
+
+📊 Fontes de Dados
+Os dados utilizados foram extraídos das tabelas da PNAD Contínua – IBGE:
+
+Tabela 2.5 – Conclusão dos anos iniciais do ensino fundamental
+Tabela 2.5.1 – Conclusão do ensino fundamental
+Tabela 2.6.2 – Conclusão do ensino médio
+Tabela 2.6.3 – Conclusão do ensino superior
+📍 Escopo da Análise
+Comparação regional entre Sudeste e Nordeste
+Evolução das taxas de conclusão (2012–2022)
+Análise por nível de ensino: fundamental, médio e superior
+Recortes por raça/cor
+Principais achados
+O Sudeste apresenta consistentemente as maiores taxas de conclusão.
+O Nordeste permanece abaixo da média nacional, apesar de avanços ao longo do período.
+A maior taxa de conclusão do ensino superior no Nordeste (15,3%) ainda é inferior à menor taxa registrada no Sudeste.
+Pessoas brancas do Sudeste possuem as maiores taxas em todos os níveis analisados.
+image
+Evolução temporal separado por grupo racial
+image
+Tabela Comparativa
+🏛️ Congresso e Publicação
+O artigo resultante deste estudo foi aprovado no Congresso Nacional Educação, Inovação e Tecnologias e será apresentado online em 15 de dezembro de 2025. Em anexo também possue o comprovante de aprovação e inscrição do projeto.
+
+🧪 Metodologia
+As análises foram realizadas com:
+
+Python
+pandas
+plotly
+Visualização:
+HTML
+CSS
+Processo aplicado:
+
+Consolidação e limpeza das bases
+Verificação e validação dos dados
+Construção dos gráficos e indicadores
+▶️ Como Executar o Projeto
+Baixe a base de dados:
+dados_consolidados.xlsx
+
+Execute os notebooks:
+
+analise_regional_nacional_completa.ipynb
+analise_equidade_racial_educacao.ipynb
+Visualize:
+infografico_educacao.html
+Abra no VS Code ou navegador.
+👥 Autores
+Larissa Rodrigues Coelho
+Bruno Santos Silva
