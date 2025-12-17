@@ -30,8 +30,12 @@ Pessoas brancas do Sudeste possuem as maiores taxas em todos os níveis analisad
 
 
 
+Desempenho regional vs. Média Nacional
+(taxa média de conclusão de ensino (2012 - 2022)
+
 <img width="899" height="436" alt="image" src="https://github.com/user-attachments/assets/7581a028-74cc-4cf7-8f90-a95cc34cda2b" />
 
+- Sudeste, Sul e Centro-Oeste consistentemente acima da média nacional, enquanto Norte e Nordeste apresentam os maiores desafios
 
 
 xxxxxxxxxxxx
