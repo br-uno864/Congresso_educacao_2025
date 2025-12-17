@@ -27,27 +27,35 @@ O Sudeste apresenta consistentemente as maiores taxas de conclusão.
 O Nordeste permanece abaixo da média nacional, apesar de avanços ao longo do período.
 A maior taxa de conclusão do ensino superior no Nordeste (15,3%) ainda é inferior à menor taxa registrada no Sudeste.
 Pessoas brancas do Sudeste possuem as maiores taxas em todos os níveis analisados.
-image
+
+
+xxxxxxxxxx
 Evolução temporal separado por grupo racial
-image
+
+
+xxxxxxxxxxxx
 Tabela Comparativa
+
+
 🏛️ Congresso e Publicação
 O artigo resultante deste estudo foi aprovado no Congresso Nacional Educação, Inovação e Tecnologias e será apresentado online em 15 de dezembro de 2025. Em anexo também possue o comprovante de aprovação e inscrição do projeto.
 
 🧪 Metodologia
 As análises foram realizadas com:
-
 Python
 pandas
 plotly
+
 Visualização:
 HTML
 CSS
-Processo aplicado:
 
+Processo aplicado:
 Consolidação e limpeza das bases
 Verificação e validação dos dados
 Construção dos gráficos e indicadores
+
+
 ▶️ Como Executar o Projeto
 Baixe a base de dados:
 dados_consolidados.xlsx
@@ -59,6 +67,9 @@ analise_equidade_racial_educacao.ipynb
 Visualize:
 infografico_educacao.html
 Abra no VS Code ou navegador.
+
+
+
 👥 Autores
 Larissa Rodrigues Coelho
 Bruno Santos Silva
