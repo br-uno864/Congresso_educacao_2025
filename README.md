@@ -54,8 +54,9 @@ Gráfico 2 – Desempenho por Nível de Ensino
 <img width="421" height="358" alt="image" src="https://github.com/user-attachments/assets/a3a77407-da15-41e4-a021-0914a676d461" />
 
 
-🏛️ Congresso e Publicação
-O artigo resultante deste estudo foi aprovado no Congresso Nacional Educação, Inovação e Tecnologias e será apresentado online em 15 de dezembro de 2025. Em anexo também possue o comprovante de aprovação e inscrição do projeto.
+# 🏛️ Congresso e Publicação
+O artigo resultante deste estudo foi aprovado no Congresso Nacional Educação, Inovação e Tecnologias e será apresentado online em 15 de dezembro de 2025.
+O repositório inclui o comprovante de aprovação e inscrição do projeto.
 
 🧪 Metodologia
 As análises foram realizadas com:
@@ -67,7 +68,7 @@ Visualização:
 HTML
 CSS
 
-Processo aplicado:
+# Processo aplicado:
 Consolidação e limpeza das bases
 Verificação e validação dos dados
 Construção dos gráficos e indicadores
