@@ -29,8 +29,9 @@ A maior taxa de conclusão do ensino superior no Nordeste (15,3%) ainda é infer
 Pessoas brancas do Sudeste possuem as maiores taxas em todos os níveis analisados.
 
 
-xxxxxxxxxx
-Evolução temporal separado por grupo racial
+
+<img width="899" height="436" alt="image" src="https://github.com/user-attachments/assets/7581a028-74cc-4cf7-8f90-a95cc34cda2b" />
+
 
 
 xxxxxxxxxxxx
