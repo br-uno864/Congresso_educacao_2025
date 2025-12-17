@@ -1,17 +1,17 @@
-# Congresso Nacional - Educação, Inovação e Tecnologia - 2025
+# Desigualdades Regionais e Étnico-Raciais na Conclusão do Ensino no Brasil (2012–2022)
 
+Congresso Nacional - Educação, Inovação e Tecnologia - 2025
 
-## Desigualdades Regionais e Étnico-Raciais na Conclusão do Ensino no Brasil (2012–2022)
-Este repositório reúne análises sobre as taxas de conclusão do ensino fundamental, médio e superior no Brasil entre 2012 e 2022, com foco nas desigualdades regionais e étnico-raciais.
+- Este repositório reúne análises sobre as taxas de conclusão do ensino fundamental, médio e superior no Brasil entre 2012 e 2022, com foco nas desigualdades regionais e étnico-raciais.
 
-📌 Objetivo do Projeto
+# 📌 Objetivo do Projeto
 Investigar como as taxas de conclusão escolar variam entre:
 
 As regiões brasileiras, com ênfase no Sudeste e Nordeste;
 Os diferentes grupos de raça/cor, conforme classificação da PNAD Contínua.
 O estudo busca evidenciar disparidades persistentes nos níveis fundamental, médio e superior.
 
-📊 Fontes de Dados
+# 📊 Fontes de Dados
 Os dados utilizados foram extraídos das tabelas da PNAD Contínua – IBGE:
 
 Tabela 2.5 – Conclusão dos anos iniciais do ensino fundamental
@@ -20,7 +20,7 @@ Tabela 2.6.2 – Conclusão do ensino médio
 Tabela 2.6.3 – Conclusão do ensino superior
 
 
-📍 Escopo da Análise
+# 📍 Escopo da Análise
 Comparação regional entre Sudeste e Nordeste
 Evolução das taxas de conclusão (2012–2022)
 Análise por nível de ensino: fundamental, médio e superior
@@ -33,20 +33,19 @@ Pessoas brancas do Sudeste possuem as maiores taxas em todos os níveis analisad
 
 
 
-GRAFICO 1 - Desempenho regional vs. Média Nacional
+# GRÁFICO 1 - Desempenho regional vs. Média Nacional
 (taxa média de conclusão de ensino (2012 - 2022)
 
 <img width="899" height="436" alt="image" src="https://github.com/user-attachments/assets/7581a028-74cc-4cf7-8f90-a95cc34cda2b" />
 
-- Sudeste, Sul e Centro-Oeste consistentemente acima da média nacional, enquanto Norte e Nordeste apresentam os maiores desafios
+- Sudeste, Sul e Centro-Oeste consistentemente acima da média nacional, enquanto Norte e Nordeste apresentam os maiores desafios.
 
-
+#GRÁFICO 2 - Desempenho nos diferentes níveis de Ensino.
 <img width="418" height="353" alt="image" src="https://github.com/user-attachments/assets/e8b2ce0e-086a-48f9-82e1-11672034aaac" />
 <img width="420" height="355" alt="image" src="https://github.com/user-attachments/assets/de248d93-da7e-4b69-b48f-ed3cb183a36b" />
 <img width="421" height="358" alt="image" src="https://github.com/user-attachments/assets/a3a77407-da15-41e4-a021-0914a676d461" />
 
-
-Tabela Comparativa
+- Ao passo que o ensino avança, a diferença se acentua drasticamente.
 
 
 🏛️ Congresso e Publicação
