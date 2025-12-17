@@ -33,7 +33,6 @@ Os dados utilizados foram extraídos das tabelas da PNAD Contínua – IBGE:
 - Pessoas brancas residentes no Sudeste concentram as maiores taxas de conclusão nos três níveis educacionais analisados;
 - À medida que o nível de ensino avança, as desigualdades regionais e raciais se intensificam.
 ---
----
 📈 Visualizações
 Gráfico 1 – Desempenho Regional vs. Média Nacional
 Taxa média de conclusão do ensino (2012–2022)
@@ -51,7 +50,6 @@ Gráfico 2 – Desempenho por Nível de Ensino
 <img width="420" height="355" alt="image" src="https://github.com/user-attachments/assets/de248d93-da7e-4b69-b48f-ed3cb183a36b" />
 
 <img width="421" height="358" alt="image" src="https://github.com/user-attachments/assets/a3a77407-da15-41e4-a021-0914a676d461" />
----
 ---
 🏛️ Congresso e Publicação
 O artigo resultante deste estudo foi aprovado no Congresso Nacional Educação, Inovação e Tecnologias e será apresentado online em 15 de dezembro de 2025.
@@ -83,8 +81,6 @@ analise_equidade_racial_educacao.ipynb
 Visualize:
 infografico_educacao.html
 Abra no VS Code ou navegador.
----
----
 ---
 👥 Autores
 Larissa Rodrigues Coelho
