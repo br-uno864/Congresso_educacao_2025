@@ -1,4 +1,4 @@
-# Congresso_educacao_2025
+# Congresso Nacional - Educação, Inovação e Tecnologia - 2025
 Congresso Educação Inovação e técninologia
 Desigualdades Regionais e Étnico-Raciais na Conclusão do Ensino no Brasil (2012–2022)
 Este repositório reúne análises sobre as taxas de conclusão do ensino fundamental, médio e superior no Brasil entre 2012 e 2022, com foco nas desigualdades regionais e étnico-raciais.
